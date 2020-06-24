@@ -1,0 +1,224 @@
+:host {}
+
+
+.contact-content {
+  margin: auto;
+  width: fit-content;
+  color: #fff;
+  padding: 50px;
+}
+
+
+.contact-container {
+  width: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-content {
+    padding: 0px;
+    padding: 0px;
+  }
+
+  .contact-container {
+    width: 100%;
+  }
+
+}
+
+input {
+  font-size: 18px;
+  padding: 10px 0px 10px 0px;
+  display: block;
+  width: 100%;
+  border: none;
+  background: rgba(0, 0, 0, 0);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  border-bottom: 1px solid #757575;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400 !important;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:focus {
+  outline: none;
+}
+
+label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+
+input:focus~label,
+.input-filled~label {
+  top: -20px !important;
+  font-size: 14px;
+  left: 0;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.bar:before,
+.bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #ac3c10;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+input:focus~.bar:before,
+input:focus~.bar:after {
+  width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 50%;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state */
+input:focus~.highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #0b4cbc;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #0b4cbc;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #0b4cbc;
+  }
+
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+.send-button {
+  text-align: right;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 27px;
+}
+
+.group.message {
+  margin-top: 52px;
+}
+
+.error-label {
+  color: red;
+  font-size: 16px !important;
+  padding-bottom: 5px;
+}
+
+.error-input {
+  border-bottom: solid 1px red;
+}
+
+.error-empty {
+  height: 24px;
+}
+
+.error-input~.error-empty {
+  display: none;
+}
+
+.send-button {
+  button {
+    border: 0;
+    border-radius: .25em;
+    background: initial;
+    background-color: #3070ff;
+    color: #fff;
+    font-size: 1.0625em;
+    padding: 10px 50px;
+  }
+
+  button:active {
+    background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2));
+    outline: 0;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(50, 100, 150, .4);
+  }
+
+  .button:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1));
+  }
+
+  .button:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(50, 100, 150, .4);
+  }
+}

@@ -4,7 +4,6 @@
       <div (click)="is_side_bar_hide = !is_side_bar_hide" id="icon-menu"></div>
     </div>
   </div>
-
   <br><br><br><br>
   <div class="button-box">
     <hr>
@@ -12,7 +11,7 @@
       <div class="icon-contain" routerLink="/">
         <div class="icon icon-home"></div> 
       </div>
-      <button class="btn btn-1 btn-1e button-text" routerLink="/">
+      <button class="button-menu button-text" routerLink="/">
         Home
       </button>
     </div>
@@ -21,7 +20,7 @@
       <div class="icon-contain" routerLink="about">
         <div class="icon icon-about"></div> 
       </div>
-      <button class="btn btn-1 btn-1e button-text" routerLink="about">
+      <button class="button-menu button-text" routerLink="about">
         About me
       </button>
     </div>
@@ -30,7 +29,7 @@
       <div class="icon-contain" routerLink="projects">
         <div class="icon icon-projects"></div> 
       </div>
-      <button class="btn btn-1 btn-1e button-text" routerLink="projects"><span>Projects</span></button>
+      <button class="button-menu button-text" routerLink="projects"><span>Projects</span></button>
     </div>
    
     <hr>
@@ -38,21 +37,20 @@
       <div class="icon-contain" routerLink="skills">
         <div class="icon icon-skills"></div> 
       </div>
-      <button class="btn btn-1 btn-1e button-text last" routerLink="skills"><span>Skills</span></button>
+      <button class="button-menu button-text last" routerLink="skills"><span>Skills</span></button>
     </div>
     <hr>
     <div class="button-icon-row">
       <div class="icon-contain"  routerLink="contact">
         <div class="icon icon-contact"></div> 
       </div>
-      <button class="btn btn-1 btn-1e button-text"  routerLink="contact">
+      <button class="button-menu button-text"  routerLink="contact">
         Contact
       </button>
     </div>
     <hr>
   </div>
 </div>
-
 <div id="side-bar-mobile" [ngClass]="{'side-bar-hide' : is_side_bar_hide}">
   <div id="icon-menu-contain">
     <div (click)="is_side_bar_hide = !is_side_bar_hide" id="icon-menu"></div>

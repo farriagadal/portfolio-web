@@ -1,1 +1,68 @@
-<p>contact works!</p>
+
+<div class="contact-content">
+    <h1 class="title-principal">Contact</h1>
+    <form class="contact-container" (ngSubmit)="createContact()" [formGroup]="validateForm">
+        <div class="group">
+          <input id='name' name="name" type="text"
+            [ngClass]="{'error-input': validateForm.get('name').hasError('required') && validateForm.get('name').touched, 'input-filled': !validateForm.get('name').hasError('required')}"
+            [(ngModel)]="contact.name" formControlName="name" />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Name</label>
+          <div class="error-empty"></div>
+          <div *ngIf="validateForm.get('name').hasError('required') && validateForm.get('name').touched" class="error-label">
+            Por favor indique su Nombre
+          </div>
+        </div>
+        <div class="group">
+          <input name="email" type="text" [(ngModel)]="contact.email" class="name-input" formControlName="email" 
+          [ngClass]="{'error-input': validateForm.get('email').hasError('required') && validateForm.get('email').touched
+          || validateForm.get('email').hasError('pattern') && validateForm.get('email').touched, 'input-filled': !validateForm.get('email').hasError('required')}"  />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Email</label>
+          <div class="error-empty"></div>
+          <div *ngIf="validateForm.get('email').hasError('required') && validateForm.get('email').touched"
+            class="error-label">
+            Por favor introduzca su Email
+          </div>
+          <div *ngIf="validateForm.get('email').hasError('pattern') && validateForm.get('email').touched" class="error-label">
+            Por favor introduzca un Email válido
+          </div>
+        </div>
+        <div class="group">
+          <input name="phone" type="text" [ngClass]="{'error-input': validateForm.get('phone').hasError('required') && validateForm.get('phone').touched
+          || validateForm.get('phone').hasError('pattern') && validateForm.get('phone').touched, 'input-filled': !validateForm.get('phone').hasError('required')}"
+            [(ngModel)]="contact.phone" class="name-input" formControlName="phone" />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Phone</label>
+          <div class="error-empty"></div>
+          <div *ngIf="validateForm.get('phone').hasError('required') && validateForm.get('phone').touched"
+            class="error-label">
+            Por favor indique su número de celular
+          </div>
+          <div *ngIf="validateForm.get('phone').hasError('pattern') && validateForm.get('phone').touched" class="error-label">
+            Por favor introduzca un número válido
+          </div>
+        </div>
+        <div class="group message">
+          <input name="message" type="text" [(ngModel)]="contact.message"
+            [ngClass]="{'error-input': validateForm.get('message').hasError('required') && validateForm.get('message').touched, 'input-filled': !validateForm.get('message').hasError('required')}"
+            class="name-input" formControlName="message" />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Message</label>
+          <div class="error-empty"></div>
+          <div *ngIf="validateForm.get('message').hasError('required') && validateForm.get('message').touched"
+            class="error-label">
+            Por favor escriba una pequeña descripción de lo que necesita
+          </div>
+        </div>
+        <div class="send-button">
+          <button class="">Send</button>
+        </div>
+      </form>
+</div>
+
+
