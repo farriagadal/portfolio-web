@@ -16,3 +16,20 @@
         display: block !important;
     }
 }
+
+
+
+ .content-view::-webkit-scrollbar {
+    width: 12px; 
+    background-color: #313131;
+ }
+ 
+ .content-view::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #313131;
+ }
+ 
+ .content-view::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #151515;
+ }
