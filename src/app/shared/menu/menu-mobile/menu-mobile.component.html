@@ -1,0 +1,38 @@
+<!---->
+<header id='nav-bar' class="nav-ontop">
+
+  <div (click)="is_side_bar_show = !is_side_bar_show" [ngClass]="{'active' : is_side_bar_show}" class="button_container"
+    id="toggle">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+  </div>
+
+  <div class="overlay" id="overlay" [ngClass]="{'open' : is_side_bar_show}">
+    <nav class="overlay-menu">
+      <ul>
+        <li>
+          <button class="button-menu button-text" routerLink="/">
+            Home
+          </button>
+        </li>
+        <li>
+          <button class="button-menu button-text" routerLink="about">
+            About me
+          </button>
+        </li>
+        <li>
+          <button class="button-menu button-text" routerLink="projects">
+            Projects
+          </button>
+        </li>
+        <li>
+          <button class="button-menu button-text" routerLink="contact">
+            Contact
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+</header>

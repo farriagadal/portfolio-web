@@ -9,7 +9,7 @@
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Name</label>
-          <div class="error-empty"></div>
+          
           <div *ngIf="validateForm.get('name').hasError('required') && validateForm.get('name').touched" class="error-label">
             Por favor indique su Nombre
           </div>
@@ -21,7 +21,7 @@
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Email</label>
-          <div class="error-empty"></div>
+          
           <div *ngIf="validateForm.get('email').hasError('required') && validateForm.get('email').touched"
             class="error-label">
             Por favor introduzca su Email
@@ -37,7 +37,7 @@
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Phone</label>
-          <div class="error-empty"></div>
+          
           <div *ngIf="validateForm.get('phone').hasError('required') && validateForm.get('phone').touched"
             class="error-label">
             Por favor indique su número de celular
@@ -53,7 +53,7 @@
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Message</label>
-          <div class="error-empty"></div>
+          
           <div *ngIf="validateForm.get('message').hasError('required') && validateForm.get('message').touched"
             class="error-label">
             Por favor escriba una pequeña descripción de lo que necesita
@@ -63,6 +63,8 @@
           <button class="">Send</button>
         </div>
       </form>
+
+      
 </div>
 
 

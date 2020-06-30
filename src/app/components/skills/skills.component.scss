@@ -1,0 +1,41 @@
+:host {
+}
+
+
+
+.skills-content {
+    margin: auto;
+    width: fit-content;
+    color: #fff;
+    padding: 50px;
+}
+
+
+.section-skills {
+    margin-bottom: 100px;
+
+    h2 {
+        text-align: center;
+        font-size: 30px;
+
+        &:before {
+          content: "\00B7";
+          font-size: 40px;
+          padding: 10px;
+        }
+    }
+
+    .row-skills {
+        display: flex;
+        justify-content: center;
+        
+        img {
+            height: 100px;
+            margin: 10px;
+        }
+    }
+
+}
+
+
+

@@ -46,11 +46,20 @@ export class ContactComponent implements OnInit {
       //   this.validateForm.markAsUntouched();
       //   this.contact = new Contact;
       // });
+      if (this.validateForm.value.message === 'Secret') {
+        this.showSecret();
+      }
     } else {
      this.ErrorNotification();
       this.validateForm.markAsTouched();
     }
   }
+
+  public showSecret(): void {
+    const audio = new Audio('assets/sound.mp3');
+    audio.play();
+  }
+
 
   public ErrorNotification(): void {
     Swal.fire(

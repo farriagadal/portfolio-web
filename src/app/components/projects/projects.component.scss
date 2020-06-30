@@ -7,20 +7,25 @@
     margin: auto;
     width: fit-content;
     color: #fff;
-    padding: 50px;
+    margin: auto;
+    padding-top: 50px;
+    max-width: 1000px;
 }
 
 .project-card {
     display: flex;
-    width: 80%;
+    width: 100%;
 
     .img-container {
         width: 50%;
         margin: 15px;
+        display: block;
 
         img {
             width: 100%;
         }
+
+  
     }
 
     .text-container {
@@ -43,4 +48,14 @@
     }
 
 
+}
+
+.techs-row {
+    display: flex;
+    justify-self: center;
+
+    img {
+        width: 40px;
+        margin: 5px 10px;
+    }
 }

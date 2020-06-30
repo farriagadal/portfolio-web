@@ -6,6 +6,7 @@
   width: fit-content;
   color: #fff;
   padding: 50px;
+  padding-top: 80px;
 }
 
 
@@ -16,7 +17,8 @@
 @media only screen and (max-width: 768px) {
   .contact-content {
     padding: 0px;
-    padding: 0px;
+    width: 85%;
+    padding-top: 80px;
   }
 
   .contact-container {
@@ -38,6 +40,9 @@ input {
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: 400 !important;
+  background: #333;
+    /* padding: 8px; */
+    padding-left: 7px;
 }
 
 /* Change Autocomplete styles in Chrome*/
@@ -175,13 +180,18 @@ input:focus~.highlight {
 }
 
 .group.message {
-  margin-top: 52px;
+ // margin-top: 52px;
+  input {
+    height: 60px;
+  }
 }
 
 .error-label {
   color: red;
   font-size: 16px !important;
   padding-bottom: 5px;
+  position: absolute;
+  right: 0px;
 }
 
 .error-input {

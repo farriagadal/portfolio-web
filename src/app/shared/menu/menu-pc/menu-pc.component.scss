@@ -1,0 +1,234 @@
+$main-color: #ffaf29;
+$secundary-color: #ffc25c;
+
+#side-bar-pc {
+  display: block;
+  background-color: #222222;
+  width: 250px;
+  height: 100vh;
+  // overflow-y: auto;
+  // overflow-x: hidden;
+  transition: width 1s;
+
+  .button-text {
+    visibility: visible;
+    width: 100%;
+    transition: visibility 1s, opacity 1s linear;
+  }
+
+  &.side-bar-hide {
+    width: 100px;
+
+    .button-text {
+      visibility: hidden;
+      opacity: 0;
+      width: 0px;
+      height: 0px;
+    }
+
+    #icon-menu-contain {
+      transform: rotate(90deg);
+    }
+
+    .icon-contain {
+      visibility: visible;
+      opacity: 1;
+      width: initial;
+      padding: 12px;
+      transition: visibility 1s, opacity 1s linear;
+    }
+  }
+
+  #icon-menu-contain {
+    width: min-content;
+    transition: transform 1s;
+    background: #333;
+    padding: 5px;
+    border-radius: 3px;
+  }
+
+  #icon-menu {
+    transition: transform 1s;
+    background-image: url('../../../../assets/menu-icon-expand-outfilled-1.svg');
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(0) invert(1);
+  }
+
+  #icon-menu:hover {
+    background-image: url('../../../../assets/menu-icon-expand-filled-1.svg');
+  }
+}
+
+.button-icon-row {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-contain {
+  width: min-content;
+  transition: transform 1s;
+  background: #333;
+  border-radius: 3px;
+  visibility: hidden;
+  opacity: 0;
+  width: 0px;
+  padding: 0px;
+
+  .icon {
+    height: 35px;
+    width: 35px;
+    margin: 5px;
+    background-size: 35px;
+    filter: brightness(0) invert(1);
+
+    &::after {
+      position: absolute;
+      margin-left: 80px;
+      background: #0000000f;
+      padding: 10px 30px;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 3px;
+      transition: all 0.5s;
+      visibility: hidden;
+      opacity: 0;
+      width: max-content;
+    }
+
+    &:hover::after {
+      visibility: visible;
+      width: initial;
+      width: max-content;
+      height: initial;
+      opacity: 1;
+
+    }
+  }
+
+  .icon-home {
+    background-image: url('../../../../assets/home-run.svg');
+
+    &::after {
+      content: "Home";
+    }
+  }
+
+  .icon-about {
+    background-image: url('../../../../assets/male-user.svg');
+
+    &::after {
+      content: "About Me";
+    }
+  }
+
+  .icon-projects {
+    background-image: url('../../../../assets/project-filled.svg');
+
+    &::after {
+      content: "Projects";
+    }
+  }
+
+  .icon-contact {
+    background-image: url('../../../../assets/send.svg');
+
+    &::after {
+      content: "Contact";
+    }
+  }
+
+  .icon-skills {
+    background-image: url('../../../../assets/list.svg');
+
+    &::after {
+      content: "Skills";
+    }
+  }
+}
+
+
+.button-box {
+  position: relative;
+  display: grid;
+  margin: 0;
+  z-index: 1;
+
+  hr {
+    width: 70%;
+    border: 0px;
+    background-color: #555;
+    height: 1px;
+  }
+
+  img {
+    display: none;
+    width: 40px;
+    filter: brightness(0) invert(1);
+  }
+}
+
+.button-menu {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  padding: 25px 0px;
+  display: inline-block;
+  margin: 5px 0px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #fff;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  margin: 0px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.button-menu:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  height: 0;
+  top: 30%;
+  left: 50%;
+  background: $secundary-color;
+  opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(110deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(110deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(110deg);
+  transform: translateX(-50%) translateY(-50%) rotate(110deg);
+}
+
+.button-menu:hover,
+.button-menu:active {
+  color: #222222;
+}
+
+
+.button-menu:hover:after {
+  height: 260%;
+  opacity: 1;
+}
+
+.button-menu:active:after {
+  height: 0%;
+  opacity: 1;
+}
