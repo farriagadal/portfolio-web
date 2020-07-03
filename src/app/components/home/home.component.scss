@@ -1,131 +1,160 @@
-:host {
-}
+:host {}
 
 $main-color: #ffaf29;
 $secundary-color: #ffc25c;
 
 .home-content {
-    margin: auto;
-    color: #fff;
-    max-width: 1000px;
-    padding: 20px;
-    padding-top: 80px;
+  margin: auto;
+  color: #fff;
+  max-width: 1000px;
+  padding: 20px;
+  padding-top: 80px;
 }
 
 @media only screen and (min-width: 768px) {
-    .home-content {
-        padding: 150px;
-    }
-    
+  .home-content {
+    padding: 150px;
+  }
+
 }
 
 
 .title-principal {
 
+  width: 0;
+  overflow: hidden;
+  white-space: no-wrap;
+  display: block;
+  border-right: 3px solid #f9d566;
+  animation: typewriter 5s steps(6) infinite, blinking-cursor 0.8s infinite;
+  animation-fill-mode: forwards
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0
+  }
+
+  25% {
+    width: 100%
+  }
+
+  48% {
+    width: 100%
+  }
+
+  50% {
+    width: 100%
+  }
+
+  55% {
+    width: 100%
+  }
+
+  75% {
+    width: 70%;
+  }
+
+  85% {
+    width: 30%;
+  }
+
+  100% {
     width: 0;
-    overflow: hidden;
-    white-space: no-wrap;
-    display:block;
-    border-right: 3px solid #f9d566;
-    animation: typewriter 5s steps(6) infinite, blinking-cursor 0.8s infinite;
-    animation-fill-mode: forwards
   }
-  
-  @keyframes typewriter {
-    0% { width:0 }
-    25% { width: 100% }
-    48% { width: 100% }
-    50% { width: 100% }
-    55% { width: 100% }
-    75% { width: 70%; }
-    85% { width: 30%; }
-    100% { width: 0; }
+}
+
+@keyframes blinking-cursor {
+  from {
+    border-color: transparent
   }
-  
-  @keyframes blinking-cursor {
-    from { border-color: transparent }
-    to { border-color: $secundary-color }
+
+  to {
+    border-color: $secundary-color
   }
+}
 
 .name-home {
-    font-weight: 900;
-    font-size: 30px;
+  font-weight: 900;
+  font-size: 30px;
 
-    &:after {
-        background-color: $main-color;
-        height: 2px;
-        width: 10px;
-        display: flex;
-    }
+  &:after {
+    background-color: $main-color;
+    height: 2px;
+    width: 10px;
+    display: flex;
+  }
 }
 
 .name-home::after {
-        background-color: $secundary-color;
-        height: 4px;
-        width: 100px;
-        margin-top: 2px;
-        content: '';
+  background-color: $secundary-color;
+  height: 4px;
+  width: 100px;
+  margin-top: 2px;
+  content: '';
 
 }
 
 .profession-home {
-    font-weight: 200;
-    font-size: 25px;
-    transition: all 4s;
-    color: #fff;
+  font-weight: 200;
+  font-size: 25px;
+  transition: all 4s;
+  color: #fff;
 
-    span:hover {
-        color: $main-color;
-    }
+  span:hover {
+    color: $main-color;
+  }
 }
 
 
-  .btn-1 {
-    font-weight: 900;
-    text-align: center;
-    color: $secundary-color;
-    cursor: pointer;
-     display: block;
-    font-size:16px;
-    font-weight: 400;
-    line-height: 45px;
-    margin: 0 0 2em;
-    max-width: 160px; 
-    position: relative;
+.button-send {
+  font-weight: 900;
+  text-align: center;
+  color: $secundary-color;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+
+  &:hover {
     text-decoration: none;
-    text-transform: uppercase;
-    width: 100%; 
-    
-    &:hover { text-decoration: none; }
-    
-    
-    svg {
-      height: 45px;
-      left: 0;
-      position: absolute;
-      top: 0; 
-      width: 100%; 
-    }
-    
-    rect {
-      fill: none;
-      stroke: $secundary-color;
-      stroke-width: 5;
-      stroke-dasharray: 422, 0;
-      transition: all 0.35s linear;
-    }
   }
-  
-  .btn-1:hover {
-    background: rgba($main-color, 0);
-    font-weight: 900;
-    //color: $main-color;
-    
-    rect {
-      stroke: $main-color;
-      stroke-width: 5;
-      stroke-dasharray: 15, 310;
-      stroke-dashoffset: 48;
-      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
-    }
+
+
+  svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
+
+  rect {
+    fill: none;
+    stroke: $secundary-color;
+    stroke-width: 5;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+  }
+}
+
+.button-send:hover {
+  background: rgba($main-color, 0);
+  font-weight: 900;
+  //color: $main-color;
+
+  rect {
+    stroke: $main-color;
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}

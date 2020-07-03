@@ -1,4 +1,7 @@
+@import 'src/styles/colors.scss';
+
 :host {}
+
 
 
 .contact-content {
@@ -9,6 +12,37 @@
   padding-top: 80px;
 }
 
+.title-principal {
+  margin: 0;
+
+  &::after {
+    background-color: $secundary-color;
+    height: 5px;
+    width: 200px;
+    margin-top: 2px;
+    content: "";
+    display: flex;
+    animation: width 1s ease-in-out;
+  }
+}
+
+@keyframes width {
+  0% {
+    width: 0
+  }
+
+  100% {
+    width: 200px
+  }
+}
+
+
+.sub-title {
+  font-size: 30px;
+  font-weight: 200;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
 
 .contact-container {
   width: 500px;
@@ -19,6 +53,10 @@
     padding: 0px;
     width: 85%;
     padding-top: 80px;
+  }
+
+  .title-principal {
+    font-size: 70px;
   }
 
   .contact-container {
@@ -40,9 +78,9 @@ input {
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: 400 !important;
-  background: #333;
-    /* padding: 8px; */
-    padding-left: 7px;
+  background: $background-secundary-color;
+  /* padding: 8px; */
+  padding-left: 7px;
 }
 
 /* Change Autocomplete styles in Chrome*/
@@ -98,7 +136,7 @@ input:focus~label,
   width: 0;
   bottom: 1px;
   position: absolute;
-  background: red;
+  background: $main-color;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
@@ -180,7 +218,8 @@ input:focus~.highlight {
 }
 
 .group.message {
- // margin-top: 52px;
+
+  // margin-top: 52px;
   input {
     height: 60px;
   }
@@ -207,28 +246,56 @@ input:focus~.highlight {
 }
 
 .send-button {
-  button {
-    border: 0;
-    border-radius: .25em;
-    background: initial;
-    background-color: #3070ff;
-    color: #fff;
-    font-size: 1.0625em;
-    padding: 10px 50px;
+
+  .button-send {
+    font-weight: 900;
+    text-align: center;
+    color: $secundary-color;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 45px;
+    margin: 0 0 2em;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+
+    svg {
+      height: 45px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    rect {
+      fill: none;
+      stroke: $secundary-color;
+      stroke-width: 5;
+      stroke-dasharray: 422, 0;
+      transition: all 0.35s linear;
+    }
   }
 
-  button:active {
-    background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2));
-    outline: 0;
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(50, 100, 150, .4);
-  }
+  .button-send:hover {
+    background: rgba($main-color, 0);
+    font-weight: 900;
+    //color: $main-color;
 
-  .button:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1));
-  }
-
-  .button:focus {
-    outline: 0;
-    box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(50, 100, 150, .4);
+    rect {
+      stroke: $main-color;
+      stroke-width: 5;
+      stroke-dasharray: 15, 310;
+      stroke-dashoffset: 48;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
   }
 }

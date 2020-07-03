@@ -1,10 +1,13 @@
+@import 'src/styles/colors.scss';
+
 .layout {
     display: flex;
     overflow: hidden;
-    
+    background: url(https://yasio.pl/assets/img/a5d79c8.webp);
+    background: $background-primary-color;
+
     .content-view {
         height: 100vh;
-        background-color: #222222;
         width: -webkit-fill-available;
         overflow-y: auto;
         overflow-x: hidden;
@@ -21,15 +24,15 @@
 
  .content-view::-webkit-scrollbar {
     width: 12px; 
-    background-color: #313131;
+    background-color: $background-primary-color;
  }
  
  .content-view::-webkit-scrollbar-track {
     border-radius: 10px;
-    background-color: #313131;
+    background-color: $background-primary-color;
  }
  
  .content-view::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    //border-radius: 10px;
     background-color: #151515;
  }
