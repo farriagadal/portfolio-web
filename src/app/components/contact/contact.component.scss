@@ -74,12 +74,10 @@ input {
   background: rgba(0, 0, 0, 0);
   font-family: 'Poppins', sans-serif;
   font-weight: 100;
-  border-bottom: 1px solid #757575;
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: 400 !important;
   background: $background-secundary-color;
-  /* padding: 8px; */
   padding-left: 7px;
 }
 
@@ -226,7 +224,7 @@ input:focus~.highlight {
 }
 
 .error-label {
-  color: red;
+  color: #b43a3a;
   font-size: 16px !important;
   padding-bottom: 5px;
   position: absolute;
@@ -234,7 +232,7 @@ input:focus~.highlight {
 }
 
 .error-input {
-  border-bottom: solid 1px red;
+  border: solid 1px #b43a3a;
 }
 
 .error-empty {

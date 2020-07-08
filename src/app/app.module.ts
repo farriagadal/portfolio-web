@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuMobileComponent } from './shared/menu/menu-mobile/menu-mobile.component';
 import { MenuPcComponent } from './shared/menu/menu-pc/menu-pc.component';
+import { Page404Component } from './components/page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MenuPcComponent } from './shared/menu/menu-pc/menu-pc.component';
     ProjectsComponent,
     SkillsComponent,
     MenuMobileComponent,
-    MenuPcComponent
+    MenuPcComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,

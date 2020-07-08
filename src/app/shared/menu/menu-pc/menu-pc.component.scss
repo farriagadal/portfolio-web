@@ -121,7 +121,7 @@ $secundary-color: #ffc25c;
     background-image: url('../../../../assets/male-user.svg');
 
     &::after {
-      content: "About Me";
+      content: "Sobre mí";
     }
   }
 
@@ -209,7 +209,7 @@ $secundary-color: #ffc25c;
   height: 0;
   top: 30%;
   left: 50%;
-  background: $secundary-color;
+  background: #fff;
   opacity: 0;
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(110deg);
   -moz-transform: translateX(-50%) translateY(-50%) rotate(110deg);

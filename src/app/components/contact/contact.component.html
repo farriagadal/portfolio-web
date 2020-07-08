@@ -1,8 +1,8 @@
 
 <div class="contact-content">
-    <h1 class="title-principal">Contact</h1>
+    <h1 class="title-principal">Contacto</h1>
     <div style="display: flex;">
-      <h2 class="sub-title">Contact me and we'll talk</h2><span>   
+      <h2 class="sub-title">¿Como te puedo ayudar?</h2><span>   
         <svg style="width: 47px;margin-left: 20px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
         <defs>
           <linearGradient id="ldio-hylt75eun39-gradient" x1="0%" x2="0%" y1="0%" y2="100%">
@@ -41,7 +41,7 @@
             [(ngModel)]="contact.name" formControlName="name" />
           <span class="highlight"></span>
           <span class="bar"></span>
-          <label>Name</label>
+          <label>Nombre</label>
           
           <div *ngIf="validateForm.get('name').hasError('required') && validateForm.get('name').touched" class="error-label">
             Por favor indique su Nombre
@@ -69,7 +69,7 @@
             [(ngModel)]="contact.phone" class="name-input" formControlName="phone" />
           <span class="highlight"></span>
           <span class="bar"></span>
-          <label>Phone</label>
+          <label>Celular</label>
           
           <div *ngIf="validateForm.get('phone').hasError('required') && validateForm.get('phone').touched"
             class="error-label">
@@ -85,7 +85,7 @@
             class="name-input" formControlName="message" />
           <span class="highlight"></span>
           <span class="bar"></span>
-          <label>Message</label>
+          <label>Mensaje</label>
           
           <div *ngIf="validateForm.get('message').hasError('required') && validateForm.get('message').touched"
             class="error-label">
@@ -97,7 +97,7 @@
             <svg>
               <rect x="0" y="0" fill="none" width="100%" height="100%"/>
             </svg>
-           SEND
+           Enviar
           </a>
         </div>
 

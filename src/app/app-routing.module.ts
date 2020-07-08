@@ -5,6 +5,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { Page404Component } from './components/page404/page404.component';
 
 const routes: Routes = [
   { 
@@ -34,7 +35,8 @@ const routes: Routes = [
   },
   { 
     path: '**', 
-    component: HomeComponent,
+    component: Page404Component,
+    data: {animation: 6},
   }
 ]
 
