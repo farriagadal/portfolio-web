@@ -1,5 +1,4 @@
-$main-color: #ffaf29;
-$secundary-color: #ffc25c;
+@import 'src/styles/colors.scss';
 
 :host {}
 
@@ -77,9 +76,6 @@ $secundary-color: #ffc25c;
     width: 200px
   }
 }
-
-
-
 
 .container-slider {
   width: 210px;

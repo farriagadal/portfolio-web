@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-pc',
@@ -9,9 +10,17 @@ export class MenuPcComponent implements OnInit {
 
   public is_side_bar_hide: boolean = false;
   
-  constructor() { }
+  constructor(
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
+  }
+
+  public setRoute(url: string): void {
+    this.router.navigate([`${url}`]);
+    window.scrollTo(0,0);
+    this.is_side_bar_hide = false;
   }
 
 }

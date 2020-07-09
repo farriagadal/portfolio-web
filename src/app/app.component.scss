@@ -20,22 +20,26 @@
     }
 }
 
+@media only screen and (min-width: 768px) {
+   .content-view::-webkit-scrollbar {
+      width: 12px; 
+      background-color: $background-primary-color;
+   }
+   
+   .content-view::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: $background-primary-color;
+   }
+   
+   .content-view::-webkit-scrollbar-thumb {
+      //border-radius: 10px;
+      background-color: $background-secundary-color;
+   }
+}
 
 
- .content-view::-webkit-scrollbar {
-    width: 12px; 
-    background-color: $background-primary-color;
- }
- 
- .content-view::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background-color: $background-primary-color;
- }
- 
- .content-view::-webkit-scrollbar-thumb {
-    //border-radius: 10px;
-    background-color: #151515;
- }
+
+
 
  #myVideo {
     position: fixed;

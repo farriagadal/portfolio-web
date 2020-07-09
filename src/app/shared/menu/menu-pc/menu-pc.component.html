@@ -11,7 +11,7 @@
         <div class="icon-contain" routerLink="/">
           <div class="icon icon-home"></div> 
         </div>
-        <button class="button-menu button-text" routerLink="/">
+        <button class="button-menu button-text" (click)="setRoute('')">
           Inicio
         </button>
       </div>
@@ -20,7 +20,7 @@
         <div class="icon-contain" routerLink="about">
           <div class="icon icon-about"></div> 
         </div>
-        <button class="button-menu button-text" routerLink="about">
+        <button class="button-menu button-text" (click)="setRoute('about')">
           Sobre mí
         </button>
       </div>
@@ -29,7 +29,7 @@
         <div class="icon-contain" routerLink="projects">
           <div class="icon icon-projects"></div> 
         </div>
-        <button class="button-menu button-text" routerLink="projects">
+        <button class="button-menu button-text" (click)="setRoute('projects')">
           Mi Trabajo
         </button>
       </div>
@@ -46,7 +46,7 @@
         <div class="icon-contain"  routerLink="contact">
           <div class="icon icon-contact"></div> 
         </div>
-        <button class="button-menu button-text"  routerLink="contact">
+        <button class="button-menu button-text" (click)="setRoute('contact')">
           Contacto
         </button>
       </div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { slideInAnimation } from './shared/menu/animation/transition';
+import { slideInAnimation } from './shared/animation/transition';
 import { RouterOutlet } from '@angular/router';
 
 @Component({

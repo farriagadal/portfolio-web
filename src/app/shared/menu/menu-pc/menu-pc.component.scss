@@ -1,5 +1,4 @@
-$main-color: #ffaf29;
-$secundary-color: #ffc25c;
+@import 'src/styles/colors.scss';
 
 #side-bar-pc {
   display: block;
@@ -42,24 +41,22 @@ $secundary-color: #ffc25c;
   #icon-menu-contain {
     width: min-content;
     transition: transform 1s;
-    background: #333;
+    background: $background-secundary-color;
     padding: 5px;
     border-radius: 3px;
+    cursor: pointer;
   }
 
   #icon-menu {
     transition: transform 1s;
-    background-image: url('../../../../assets/menu-icon-expand-outfilled-1.svg');
+    background-image: url('../../../../assets/menu-icon-expand-filled.svg');
     height: 50px;
     width: 50px;
     margin: 5px;
     background-size: contain;
     background-repeat: no-repeat;
     filter: brightness(0) invert(1);
-  }
-
-  #icon-menu:hover {
-    background-image: url('../../../../assets/menu-icon-expand-filled-1.svg');
+    
   }
 }
 
@@ -71,12 +68,13 @@ $secundary-color: #ffc25c;
 .icon-contain {
   width: min-content;
   transition: transform 1s;
-  background: #333;
+  background: $background-secundary-color;
   border-radius: 3px;
   visibility: hidden;
   opacity: 0;
   width: 0px;
   padding: 0px;
+  cursor: pointer;
 
   .icon {
     height: 35px;
@@ -113,7 +111,7 @@ $secundary-color: #ffc25c;
     background-image: url('../../../../assets/home-run.svg');
 
     &::after {
-      content: "Home";
+      content: "Inicio";
     }
   }
 
@@ -129,7 +127,7 @@ $secundary-color: #ffc25c;
     background-image: url('../../../../assets/project-filled.svg');
 
     &::after {
-      content: "Projects";
+      content: "Mi Trabajo";
     }
   }
 
@@ -137,7 +135,7 @@ $secundary-color: #ffc25c;
     background-image: url('../../../../assets/send.svg');
 
     &::after {
-      content: "Contact";
+      content: "Contacto";
     }
   }
 

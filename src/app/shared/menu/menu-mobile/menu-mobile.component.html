@@ -12,22 +12,22 @@
     <nav class="overlay-menu">
       <ul>
         <li>
-          <button class="button-menu button-text" routerLink="/">
+          <button class="button-menu button-text" (click)="setRoute('')">
             Inicio
           </button>
         </li>
         <li>
-          <button class="button-menu button-text" routerLink="about">
+          <button class="button-menu button-text" (click)="setRoute('about')">
             Sobre mí
           </button>
         </li>
         <li>
-          <button class="button-menu button-text" routerLink="projects">
+          <button class="button-menu button-text" (click)="setRoute('projects')">
             Mi Trabajo
           </button>
         </li>
         <li>
-          <button class="button-menu button-text" routerLink="contact">
+          <button class="button-menu button-text" (click)="setRoute('contact')">
             Contacto
           </button>
         </li>
