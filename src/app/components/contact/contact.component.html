@@ -34,7 +34,7 @@
 
 
 
-    <form class="contact-container" (ngSubmit)="createContact()" [formGroup]="validateForm">
+    <form class="contact-container" (ngSubmit)="createContact($event)" [formGroup]="validateForm">
         <div class="group">
           <input id='name' name="name" type="text"
             [ngClass]="{'error-input': validateForm.get('name').hasError('required') && validateForm.get('name').touched, 'input-filled': !validateForm.get('name').hasError('required')}"
@@ -92,7 +92,7 @@
             Por favor escriba una pequeña descripción de lo que necesita
           </div>
         </div>
-        <div class="send-button" (click)="createContact()">
+        <div class="send-button" (click)="createContact($event)">
           <a class="button-send">
             <svg>
               <rect x="0" y="0" fill="none" width="100%" height="100%"/>

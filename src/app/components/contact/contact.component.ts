@@ -3,7 +3,7 @@ import { Contact } from 'src/app/models/contact';
 //import { ContactService } from '../services/contact/contact.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import Swal from  'sweetalert2';
-
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
   selector: 'app-contact',
@@ -34,25 +34,30 @@ export class ContactComponent implements OnInit {
     })
   }
 
-  public createContact(): void {
+  public createContact(e: Event): void {
     if (this.validateForm.status == 'VALID') {
-      // this.contact_service.createContact(this.contact).subscribe(data => {
-      //   this.SuccessNotification()
-      //   window.scroll(0,0);
-      //   this.validateForm.markAsUntouched();
-      //   this.contact = new Contact;
-      // }, error => {
-      //   this.ErrorServer();
-      //   this.validateForm.markAsUntouched();
-      //   this.contact = new Contact;
-      // });
+      this.sendEmail();
       if (this.validateForm.value.message === 'Secret') {
         this.showSecret();
       }
     } else {
-     this.ErrorNotification();
+      this.ErrorNotification();
       this.validateForm.markAsTouched();
     }
+  }
+
+  public sendEmail() {
+    emailjs.send('gmail', 'templateneokey23', this.contact, "user_Z9ZA15CBTB3P6Kw6xRIeQ")
+    .then(success => {
+        this.SuccessNotification();
+        window.scroll(0,0);
+        this.validateForm.markAsUntouched();
+        this.contact = new Contact;
+    }, error => {
+        this.ErrorServer();
+        this.validateForm.markAsUntouched();
+        this.contact = new Contact;
+    });
   }
 
   public showSecret(): void {
