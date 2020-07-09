@@ -4,7 +4,7 @@
     display: flex;
     overflow: hidden;
     background: url(https://yasio.pl/assets/img/a5d79c8.webp);
-    background: $background-primary-color;
+    // background: $background-primary-color;
 
     .content-view {
         height: 100vh;
@@ -36,3 +36,25 @@
     //border-radius: 10px;
     background-color: #151515;
  }
+
+ #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+ }
+
+ .video-grid {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    z-index: -1;
+ }
+
+
+ 
