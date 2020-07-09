@@ -3,14 +3,35 @@
 <head>
   <meta charset="utf-8">
   <title>Portfolio</title>
-  <meta name="theme-color" content="#222222">
+  <meta name="theme-color" content="#100e17">
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <!-- Windows Phone -->
-  <meta name="msapplication-navbutton-color" content="#222222">
+  <meta name="msapplication-navbutton-color" content="#100e17">
   <!-- iOS Safari -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="#222222">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#100e17">
+  <!-- Facebook Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '3082924931783292');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=3082924931783292&ev=PageView&noscript=1"
+  /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <meta property="og:title" content="Fernando Arriagada">
+    <meta property="og:description" content="Software Developer Portafolio">
+    <meta property="og:image" content="https://cdn.seeklearning.com.au/media/images/career-guide/module/web-developer-module.jpg">
+    <meta property="og:url" content="https://farriagadal.github.io/portfolio-web">
 </head>
 <body>
   <app-root></app-root>
