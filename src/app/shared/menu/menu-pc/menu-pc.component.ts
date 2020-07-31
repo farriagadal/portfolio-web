@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class MenuPcComponent implements OnInit {
 
-  public is_side_bar_hide: boolean = false;
+  public is_side_bar_hide: boolean = true;
   
   constructor(
     private router: Router
@@ -20,7 +20,6 @@ export class MenuPcComponent implements OnInit {
   public setRoute(url: string): void {
     this.router.navigate([`${url}`]);
     window.scrollTo(0,0);
-    this.is_side_bar_hide = false;
   }
 
 }
