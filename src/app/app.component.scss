@@ -3,9 +3,11 @@
 .layout {
     display: flex;
     overflow: hidden;
-    background: url(https://yasio.pl/assets/img/a5d79c8.webp);
-    // background: $background-primary-color;
-
+    background: url(/assets/background-image.webp);
+    //background: $background-primary-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     .content-view {
         height: 100vh;
         width: -webkit-fill-available;
