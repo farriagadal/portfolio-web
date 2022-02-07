@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-
-
+  public getCV(): void {
+    window.open('/assets/CV-Fernando-Arriagada.pdf', '_blank');
+  }
 }

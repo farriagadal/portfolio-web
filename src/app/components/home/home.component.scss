@@ -100,9 +100,25 @@ $secundary-color: #ffc25c;
   font-size: 25px;
   transition: all 4s;
   color: #fff;
+  margin-bottom: 50px;
 
-  span:hover {
-    color: $main-color;
+  a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+
+  a,button {
+    &:first-child {
+      margin-right: 15px;
+    }
   }
 }
 
@@ -157,4 +173,9 @@ $secundary-color: #ffc25c;
     stroke-dashoffset: 48;
     transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
   }
+}
+
+.button-send.button-download {
+  background: $secundary-color;
+  color: #100e17;
 }
